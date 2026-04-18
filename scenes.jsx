@@ -1179,54 +1179,32 @@ function SceneZoomBack({ start, dur }) {
 
 // ─── eduLAB logo — faceted gem icon + "edu" gray + "LAB" teal + orange dot ───
 function EduLabLogo({ width = 520 }) {
-  const LTEAL   = '#4DB6AC';
-  const LGRAY   = '#5A5A5A';
+  const LTEAL   = '#4BBFBA';
+  const LGRAY   = '#606060';
   const LORANGE = '#F5A623';
+  const FONT    = "Poppins,'Helvetica Neue',Helvetica,sans-serif";
+  const pts = "120,4 156,112 234,150 177,245 120,264 63,245 6,150 84,112";
+  const HX = 120, HY = 172;
   return (
     <svg width={width} viewBox="0 0 820 270" xmlns="http://www.w3.org/2000/svg"
          style={{ display: 'block' }}>
-      <defs>
-        {/* 8-sided concave star: 4 outer vertices + 4 inner junctions */}
-        <clipPath id="gemClip">
-          <polygon points="120,8 150,125 232,155 178,250 120,268 62,250 8,155 90,125"/>
-        </clipPath>
-      </defs>
+      {/* Solid teal 8-sided concave star */}
+      <polygon points={pts} fill={LTEAL}/>
+      {/* White seam lines from hub → 4 inner junction vertices */}
+      <line x1={HX} y1={HY} x2="84"  y2="112" stroke="white" strokeWidth="7" strokeLinecap="round"/>
+      <line x1={HX} y1={HY} x2="156" y2="112" stroke="white" strokeWidth="7" strokeLinecap="round"/>
+      <line x1={HX} y1={HY} x2="63"  y2="245" stroke="white" strokeWidth="7" strokeLinecap="round"/>
+      <line x1={HX} y1={HY} x2="177" y2="245" stroke="white" strokeWidth="7" strokeLinecap="round"/>
 
-      {/* ── Faceted teal gem icon ── */}
-      <g clipPath="url(#gemClip)">
-        <polygon points="120,8 150,125 232,155 178,250 120,268 62,250 8,155 90,125"
-                 fill={LTEAL}/>
-        {/* 4 white seams radiating from hub to outer vertices */}
-        <line x1="120" y1="170" x2="90"  y2="125" stroke="white" strokeWidth="6" strokeLinecap="round"/>
-        <line x1="120" y1="170" x2="150" y2="125" stroke="white" strokeWidth="6" strokeLinecap="round"/>
-        <line x1="120" y1="170" x2="62"  y2="250" stroke="white" strokeWidth="6" strokeLinecap="round"/>
-        <line x1="120" y1="170" x2="178" y2="250" stroke="white" strokeWidth="6" strokeLinecap="round"/>
-      </g>
-
-      {/* ── "edu" — gray, light weight ── */}
-      <text x="284" y="168"
-            fontFamily="Poppins,'Helvetica Neue',Helvetica,sans-serif"
-            fontSize="120" fontWeight="300"
-            fill={LGRAY}>edu</text>
-
-      {/* ── orange dot ── */}
-      <circle cx="510" cy="118" r="13" fill={LORANGE}/>
-
-      {/* ── "LAB" — teal, bold ── */}
-      <text x="530" y="168"
-            fontFamily="Poppins,'Helvetica Neue',Helvetica,sans-serif"
-            fontSize="120" fontWeight="700"
-            fill={LTEAL}>LAB</text>
-
-      {/* ── "by technofutur tic" ── */}
-      <text x="284" y="213"
-            fontFamily="Poppins,'Helvetica Neue',Helvetica,sans-serif"
-            fontSize="30" fontWeight="400"
-            fill={LGRAY}>by technofutur</text>
-      <text x="553" y="200"
-            fontFamily="Poppins,'Helvetica Neue',Helvetica,sans-serif"
-            fontSize="19" fontWeight="400"
-            fill={LGRAY}>tic</text>
+      {/* "edu" — gray 300 */}
+      <text x="278" y="172" fontFamily={FONT} fontSize="118" fontWeight="300" fill={LGRAY}>edu</text>
+      {/* orange dot — vertically centred on cap-height */}
+      <circle cx="505" cy="120" r="14" fill={LORANGE}/>
+      {/* "LAB" — teal 700 */}
+      <text x="527" y="172" fontFamily={FONT} fontSize="118" fontWeight="700" fill={LTEAL}>LAB</text>
+      {/* "by technofutur" + "tic" superscript */}
+      <text x="278" y="216" fontFamily={FONT} fontSize="29" fontWeight="400" fill={LGRAY}>by technofutur</text>
+      <text x="528" y="202" fontFamily={FONT} fontSize="18" fontWeight="400" fill={LGRAY}>tic</text>
     </svg>
   );
 }
