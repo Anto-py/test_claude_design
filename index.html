@@ -1109,65 +1109,13 @@ function SceneZoomBack({ start, dur }) {
 
 // ─── eduLAB Logo ─────────────────────────────────────────────────────────────
 function EduLabLogo({ width = 520 }) {
-  const LTEAL   = '#4BBFBA';
-  const LGRAY   = '#606060';
-  const LORANGE = '#F5A623';
-  const FONT    = "Poppins,'Helvetica Neue',Helvetica,sans-serif";
-
-  /*
-   * Icon: 8-sided concave star (240×265 in a 820×270 viewBox).
-   * Outer vertices at top/left/right/bottom, inner junctions where
-   * the kite facet meets the side facets.
-   * White seam lines radiate from a single hub to the 4 inner junctions,
-   * drawn ON TOP of the solid teal fill (no clipPath needed).
-   *
-   *        (120,4)
-   *       /   |   \
-   *   (84,112)|(156,112)
-   *  /    hub(120,172)   \
-   * (6,150)       (234,150)
-   *  \                  /
-   *  (63,245)  (177,245)
-   *       \     /
-   *       (120,264)
-   */
-  const pts = "120,4 156,112 234,150 177,245 120,264 63,245 6,150 84,112";
-  const HX = 120, HY = 172;
-
   return (
-    <svg width={width} viewBox="0 0 820 270" xmlns="http://www.w3.org/2000/svg"
-         style={{ display: 'block' }}>
-
-      {/* ── Faceted gem icon ── */}
-      {/* 1. Solid teal fill of the 8-sided concave star */}
-      <polygon points={pts} fill={LTEAL}/>
-      {/* 2. White seam lines from hub → 4 inner junction vertices */}
-      <line x1={HX} y1={HY} x2="84"  y2="112" stroke="white" strokeWidth="7" strokeLinecap="round"/>
-      <line x1={HX} y1={HY} x2="156" y2="112" stroke="white" strokeWidth="7" strokeLinecap="round"/>
-      <line x1={HX} y1={HY} x2="63"  y2="245" stroke="white" strokeWidth="7" strokeLinecap="round"/>
-      <line x1={HX} y1={HY} x2="177" y2="245" stroke="white" strokeWidth="7" strokeLinecap="round"/>
-
-      {/* ── "edu" — gray 300 ── */}
-      <text x="278" y="172"
-            fontFamily={FONT} fontSize="118" fontWeight="300"
-            fill={LGRAY}>edu</text>
-
-      {/* ── orange dot — vertically centred on cap-height ── */}
-      <circle cx="505" cy="120" r="14" fill={LORANGE}/>
-
-      {/* ── "LAB" — teal 700 ── */}
-      <text x="527" y="172"
-            fontFamily={FONT} fontSize="118" fontWeight="700"
-            fill={LTEAL}>LAB</text>
-
-      {/* ── "by technofutur" + "tic" superscript ── */}
-      <text x="278" y="216"
-            fontFamily={FONT} fontSize="29" fontWeight="400"
-            fill={LGRAY}>by technofutur</text>
-      <text x="528" y="202"
-            fontFamily={FONT} fontSize="18" fontWeight="400"
-            fill={LGRAY}>tic</text>
-    </svg>
+    <img
+      src="edulab-logo-transparent.png"
+      width={width}
+      alt="eduLAB logo"
+      style={{ display: 'block' }}
+    />
   );
 }
 
