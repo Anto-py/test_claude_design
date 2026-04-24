@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8"/>
 <title>Échelles cosmiques — eduLAB</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
   html, body { margin: 0; padding: 0; height: 100%; background: #0a0a0a; overflow: hidden; }
   #root { width: 100vw; height: 100vh; }
@@ -13,12 +14,10 @@
 </style>
 </head>
 <body>
-<div id="root" data-video-root data-screen-label="t=0s"></div>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-
+<div data-screen-label="t=0s" data-video-root="" id="root"></div>
+<script crossorigin="anonymous" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script crossorigin="anonymous" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script crossorigin="anonymous" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
 <!-- ─── animations.jsx ──────────────────────────────────────────────────── -->
 <script type="text/babel">
 
@@ -422,7 +421,6 @@ Object.assign(window, {
   Stage, PlaybackBar,
 });
 </script>
-
 <!-- ─── scenes.jsx ───────────────────────────────────────────────────────── -->
 <script type="text/babel">
 
@@ -1226,7 +1224,6 @@ Object.assign(window, {
   INK, PAPER, DIM, RULE, HELV, BODY, CYAN, GOLD, PINK,
 });
 </script>
-
 <!-- ─── App ──────────────────────────────────────────────────────────────── -->
 <script type="text/babel">
   const DURATIONS = {
@@ -1272,11 +1269,9 @@ Object.assign(window, {
 
   ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 </script>
-
 <div class="ab-attribution" style="text-align:center;margin-top:2rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,0.25);font-size:0.8rem;opacity:0.65;">
-  <a href="https://www.linkedin.com/in/antonin-bareau/" target="_blank" rel="noopener" style="font-weight:bold;color:inherit;text-decoration:none;">Antonin Bareau</a>
-  &nbsp;&mdash;&nbsp;
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Licence CC BY-SA 4.0</a>
-</div>
-</body>
+<a href="https://www.linkedin.com/in/antonin-bareau/" rel="noopener" style="font-weight:bold;color:inherit;text-decoration:none;" target="_blank">Antonin Bareau</a>
+   — 
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" style="color:inherit;text-decoration:none;" target="_blank">Licence CC BY-SA 4.0</a>
+</div></body>
 </html>
